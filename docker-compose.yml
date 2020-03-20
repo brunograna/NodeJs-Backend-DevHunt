@@ -1,0 +1,14 @@
+version: '3.1'
+
+services:
+
+  mongodb:
+    image: mongo:3
+    container_name: backend-mongodb-api
+    restart: always
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: backend
+      MONGO_INITDB_ROOT_PASSWORD: secret
+      MONGO_INITDB_DATABASE: week10
